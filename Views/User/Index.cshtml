@@ -8,6 +8,8 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    <input type="text" id="searchField" placeholder="Search">
+    <button type="button" onclick="search()">Search</button>
 </p>
 <table class="table">
     <tr>
@@ -37,3 +39,18 @@
 }
 
 </table>
+
+<script>
+    function search() {
+        var searchValue = document.getElementById("searchField").value;
+        var rows = document.getElementsByTagName("tr");
+        for (var i = 1; i < rows.length; i++) {
+            var name = rows[i].getElementsByTagName("td")[0].innerText;
+            if (name.startsWith(searchValue)) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+</script>
