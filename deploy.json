@@ -19,8 +19,8 @@
       "name": "[parameters('serverName')]",
       "location": "[parameters('location')]",
       "properties": {
-        "administratorLogin": "admin",
-        "administratorLoginPassword": "password"
+        "administratorLogin": "azureuser",
+        "administratorLoginPassword": "gvmr73RPJ*fU"
       },
       "resources": [
         {
